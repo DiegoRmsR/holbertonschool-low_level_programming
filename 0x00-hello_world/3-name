@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o -name cisfin $CFILE
+gcc -E -name "cisfin" $CFILE
