@@ -1,4 +1,4 @@
-i#!/bin/bash
+#!/bin/bash
 #include <stdio.h>
 
 /**
