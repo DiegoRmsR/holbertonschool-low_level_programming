@@ -8,6 +8,11 @@ nclude <stdio.h>
  */
 int main(void)
 {
-pust (test("Programming is like building a multilingual puzzle));
+pust (tes);
+    return (0);
+}
+int main(void)
+{
+pust ("/"Programming is like building a multilingual puzzle);
     return (0);
 }
