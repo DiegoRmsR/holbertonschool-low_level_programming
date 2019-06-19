@@ -1,5 +1,5 @@
 i#!/bin/bash
-nclude <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -8,11 +8,6 @@ nclude <stdio.h>
  */
 int main(void)
 {
-pust (tes);
-    return (0);
-}
-int main(void)
-{
-pust ("/"Programming is like building a multilingual puzzle);
-    return (0);
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
 }
