@@ -9,7 +9,7 @@ int main(void)
 {
 	char gg;
 
-	for (gg = '0'; gg <= '9' ; gg++)
+	for (gg = '0'; gg <= '9'; gg++)
 		putchar (gg);
 	putchar ('\n');
 	return (0);
