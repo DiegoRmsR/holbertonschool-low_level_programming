@@ -16,4 +16,3 @@ char eo;
         putchar('\n');
 	return (0);
 }
-
