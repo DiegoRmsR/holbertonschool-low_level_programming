@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <time.h>
+/* more headers goes there */
 #include <stdio.h>
 /**
  * main - Entry point
@@ -6,12 +9,12 @@
  */
 int main(void)
 {
-char d, s;
+	char dx, xd;
 
-	for (d = 'a' ; d <= 'z' ; d++)
-		putchar(d);
-	for (s = 'A' ; s <= 'Z' ; s++)
-		putchar(s);
-        putchar('\n');
+	for (dx = 'a'; dx <= 'z' ; dx++)
+		putchar (dx);
+	for (xd = 'A'; xd <= 'Z'; xd++)
+		putchar (xd);
+	putchar ('\n');
 	return (0);
 }
