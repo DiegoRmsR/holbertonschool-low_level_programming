@@ -6,21 +6,21 @@
  */
 int main(void)
 {
-        int gg, lol;
+	int gg, lol;
 
-        for (gg = 48; gg <= 57; gg++)
-        {
-                for (lol = 48; lol <= 57 ; lol++)
-                {
-                        putchar (gg);
-                        putchar (lol);
-                        if (gg != 57 || lol != 57)
-                        {
-                                putchar (44);
-                                putchar (' ');
-                        }
-                }
-        }
-        putchar ('\n');
-        return (0);
+	for (gg = 48; gg <= 57; gg++)
+	{
+	for (lol = 48; lol <= 57; lol++)
+		{
+			putchar (gg);
+			putchar (lol);
+			if (gg != 57 || lol != 57)
+			{
+				putchar (44);
+				putchar (' ');
+			}
+		}
+	}
+	putchar ('\n');
+	return (0);
 }
