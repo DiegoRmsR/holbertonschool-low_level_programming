@@ -1,4 +1,4 @@
-#include <stdio.h>
+nclude <stdio.h>
 /**
  * main - Entry point
  *
@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	int gg, lol;
+	int n, d;
 
-	for (gg = 48; gg <= 57; gg++)
+	for (n = 48; n <= 57; n++)
 	{
-	for (lol = 48; lol <= 57; lol++)
+		for (d = 48; d <= 57 ; d++)
 		{
-			putchar (gg);
-			putchar (lol);
-			if (gg != 57 || lol != 57)
+			putchar (n);
+			putchar (d);
+			if (n != 57 || d != 57)
 			{
 				putchar (44);
 				putchar (' ');
