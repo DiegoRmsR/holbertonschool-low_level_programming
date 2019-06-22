@@ -7,45 +7,30 @@
  */
 int main(void)
 {
-	int first;
-	int second;
+	int i, j;
 
-	int third;
-	int fourth;
+	i = 0;
 
-	int comma = 44;
-	int space = 32;
-
-	for (first = 48; first <= 57; first++)
+	while (i < 100)
 	{
-		for (second = 48; second <= 57; second++)
+		j = i + 1;
+		while (j < 100)
 		{
-
-			for (third = first ; third <= 57; third++)
-			{
-				for (fourth = second + 1; fourth <= 57; fourth++)
-				{
-
-					putchar(first);
-					putchar(second);
-					putchar(space);
-					putchar(third);
-					putchar(fourth);
-					if (first == 57 && second == 56 && third == 57 && fourth == 57)
-					{
-						putchar('\n');
-					}
-					else
-					{
-						putchar(comma);
-						putchar(space);
-					}
-
-				}
-
-			}
+		putchar(i / 10 + '0');
+		putchar(i % 10 + '0');
+		putchar(' ');
+		putchar(j / 10 % 10 + '0');
+		putchar(j % 10 + '0');
+		if (i == 98)
+		{
+			break;
 		}
+		putchar(',');
+		putchar(' ');
+		j++;
+		}
+		i++;
 	}
+	putchar('\n');
 	return (0);
 }
-

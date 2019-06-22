@@ -7,28 +7,26 @@
  */
 int main(void)
 {
-        int first;
-        int second;
-        int count = 49;
+	int i, j;
 
-        for (first = 48; first <= 57; first++)
-        {
-                for (second = count; second <= 57; second++)
-                {
-                        putchar(first);
-                        putchar(second);
-                        if (first == 56 && second == 57)
-                        {
-                                return(0);
-                        }
-                        if (first != 56 || second != 57)
-                        {
-                                putchar(',');
-                                putchar(' ');
-                        }
-                }
-                count++;
-        }
-        putchar('\n');
-        return (0);
-}
+	i = 1;
+
+	while (i < 90)
+	{
+		if (i % 10 == 0)
+		{
+			j = i / 10;
+			i += j + 1;
+		}
+		putchar(i / 10 % 10 + '0');
+		putchar(i % 10 + '0');
+		if (i < 88)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		i++;
+	}
+	putchar('\n');
+	return (0);
+
