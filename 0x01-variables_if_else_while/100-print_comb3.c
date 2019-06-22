@@ -19,7 +19,6 @@ int main(void)
                         putchar(a);
                         if (i == 56 && i == 57)
                         {
-                                return(0);
                         }
                         if (i != 56 || a != 57)
                         {
