@@ -7,32 +7,31 @@
  */
 int main(void)
 {
-	int i;
 	int a;
-	int e;
+	int b;
+	int c;
 	int d = 0;
-	int gg = 44;
-	int lol = 32;
+	int e = 44;
+	int f = 32;
 
-	for (i = 48; i <= 55; i++)
+	for (a = 48; a <= 55; a++)
 	{
-		for (a = (49 + d); a <= 56; a++)
+		for (b = (49 + d); b <= 56; b++)
 		{
-			for (e = (a + 1); e <= 57; e++)
+			for (c = (b + 1); c <= 57; c++)
 			{
-				putchar(i);
 				putchar(a);
-				putchar(e);
-				if (i == 55 && a == 56 && e == 57)
+				putchar(b);
+				putchar(c);
+				if (a == 55 && b == 56 && c == 57)
 				{
-					       putchar('\n');
-                 return(0);
+					putchar('\n');
+					return (0);
 				}
-				putchar(gg);
-				putchar(lol);
+				putchar(e);
+				putchar(f);
 			}
-		}
-		d++;
+	d++;
 	}
 	return (0);
 }

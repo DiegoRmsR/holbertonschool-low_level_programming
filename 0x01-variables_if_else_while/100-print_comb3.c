@@ -7,27 +7,27 @@
  */
 int main(void)
 {
-        int i;
         int a;
+        int b;
         int gg = 49;
 
-        for (i = 48; i <= 57; i++)
+        for (a = 48; a <= 57; a++)
         {
-                for (a = gg; a <= 57; a++)
+                for (b = gg; b <= 57; b++)
                 {
-                        putchar(i);
                         putchar(a);
-                        if (i == 56 && a == 57)
+                        putchar(b);
+                        if (a == 56 && b == 57)
                         {
                                 return(0);
                         }
-                        if (i != 56 || a != 57)
+                        if (a != 56 || b != 57)
                         {
                                 putchar(',');
                                 putchar(' ');
                         }
                 }
-                gg++;
+            gg++;
         }
         putchar('\n');
         return (0);
