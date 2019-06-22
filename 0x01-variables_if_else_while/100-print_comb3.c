@@ -7,26 +7,22 @@
  */
 int main(void)
 {
-	int i, j;
+	int num1, num2;
 
-	i = 1;
-
-	while (i < 90)
+	for (num1 = 48; num1 <= 57; num1++)
 	{
-		if (i % 10 == 0)
+		for (num2 = num1 + 1; num2 <= 57; num2++)
 		{
-			j = i / 10;
-			i += j + 1;
+			putchar(num1);
+			putchar(num2);
+
+			if (!(num1 == 56 && num2 == 57))
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		putchar(i / 10 % 10 + '0');
-		putchar(i % 10 + '0');
-		if (i < 88)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		i++;
 	}
 	putchar('\n');
 	return (0);
-
+}
