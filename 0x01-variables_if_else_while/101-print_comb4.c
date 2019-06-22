@@ -26,7 +26,6 @@ int main(void)
 				if (i == 55 && a == 56 && e == 57)
 				{
 					putchar('\n');
-					return (0);
 				}
 				putchar(gg);
 				putchar(lol);
