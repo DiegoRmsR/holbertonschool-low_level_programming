@@ -7,31 +7,32 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d = 0;
-	int e = 44;
-	int f = 32;
+	int first;
+	int second;
+	int third;
+	int count = 0;
+	int comma = 44;
+	int space = 32;
 
-	for (a = 48; a <= 55; a++)
+	for (first = 48; first <= 55; first++)
 	{
-		for (b = (49 + d); b <= 56; b++)
+		for (second = (49 + count); second <= 56; second++)
 		{
-			for (c = (b + 1); c <= 57; c++)
+			for (third = (second + 1); third <= 57; third++)
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-				if (a == 55 && b == 56 && c == 57)
+				putchar(first);
+				putchar(second);
+				putchar(third);
+				if (first == 55 && second == 56 && third == 57)
 				{
 					putchar('\n');
 					return (0);
 				}
-				putchar(e);
-				putchar(f);
+				putchar(comma);
+				putchar(space);
 			}
-	d++;
+		}
+		count++;
 	}
 	return (0);
 }
