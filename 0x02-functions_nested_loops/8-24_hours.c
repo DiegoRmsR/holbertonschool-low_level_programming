@@ -2,14 +2,14 @@
 
 /**
  * jack_bauer - prints every minute of the day
- * @i: variable, @a: variable, @b: variable, @c: variable
- * Return:
+ * Return: Nothing
  */
 void jack_bauer(void)
 {
-int i, a, b, c;
+	int i, a, b, c;
+
 	for (i = 0; i <= 2; i++)
-		{
+	{
 		for (a = 0; a <= 9; a++)
 		{
 			for (b = 0; b <= 5; b++)

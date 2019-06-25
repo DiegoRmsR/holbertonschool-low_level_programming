@@ -3,11 +3,11 @@
 /**
  * print_last_digit - print last digit
  * @i: variable
- * Return: print i
+ * Return: i
  */
 int print_last_digit(int i)
 {
-int c;
+	int c;
 
 	if (i >= 0)
 	{
