@@ -1,17 +1,15 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet_x10 - print alphabet 10 times in order
  *
- * Return: Always 0.
  */
 void print_alphabet_x10(void)
-
 {
 int i, a;
-	for (i = 'a'; i <= 'z'; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (a = 0; a <= 10; a++)
-			_putchar(i);
+		for (a = 'a'; a <= 'z'; a++)
+			_putchar(a);
 		_putchar('\n');
 	}
 }
