@@ -1,49 +1,51 @@
 #include "holberton.h"
+
 /**
- * print_times_table - Table of 1 until 9
- * @n: table until 15
+ * print_times_table - prints the n times table, starting with 0
  *
- * Return: any
+ * @n: Void input
+ *
  */
 void print_times_table(int n)
 {
-	int line, colum;
+	/* local variable declaration */
+	int i;
+	int j;
 
-	if (n < 16 && n >= 0)
-	{
-	for (line = 0; line <= n; line++)
-	{
-		for (colum = 0; colum <= n; colum++)
+	for (i = 0 ; i <= n ; i++)
 		{
-			if (line * colum < 10)
+		if (n > 15 || n < 0)
+			break;
+		for (j = 0 ; j <= n ; j++)
 			{
-				if (colum != 0)
+			if (j != 0)
 				{
-					_putchar (44);
-					_putchar (32);
-					_putchar (32);
-					_putchar (32);
+				if (((i * j) / 100) > 0)
+					_putchar('0' + ((i * j) / 100));
+				else
+					_putchar(' ');
+
+				if ((((i * j) % 100) / 10) > 0 || ((i * j) / 100) > 0)
+					_putchar('0' + (((i * j) % 100) / 10));
+				else
+					_putchar(' ');
+
+				if (((i * j) % 10) > 0 || (((i * j) % 100) / 10) > 0 ||
+				   ((i * j) / 100) > 0)
+					_putchar('0' + ((i * j) % 10));
+				else
+					_putchar('0');
 				}
-				_putchar ((line * colum) % 10 + '0');
-			}
-			else if (line * colum < 100)
-			{
-				_putchar (44);
-				_putchar (32);
-				_putchar (32);
-				_putchar ((line * colum) / 10 + '0');
-				_putchar ((line * colum) % 10 + '0');
-			}
 			else
-			{
-				_putchar (44);
-				_putchar (32);
-				_putchar ((line * colum) / 100 + '0');
-				_putchar (((line * colum) / 10) % 10 + '0');
-				_putchar ((line * colum) % 10 + '0');
+				_putchar('0');
+
+			if (j != n)
+				{
+				_putchar(',');
+				_putchar(' ');
+				}
+			else
+				_putchar('\n');
 			}
 		}
-		_putchar(10);
-	}
-	}
 }

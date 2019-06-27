@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	int a = 0;
-	long firts = 0;
-	long secund = 1;
-	long l = 1;
+	int i = 0;
+	long primero = 0;
+	long segundo = 1;
+	long f = 1;
 
 	do {
-		printf("%li, ", l);
-		first = secund;
-		secund = l;
-		l = firts + secund;
-		a++;
-	} while (a < 49);
+		printf("%li, ", f);
+		primero = segundo;
+		segundo = f;
+		f = primero + segundo;
+		i++;
+	} while (i < 49);
 
-	printf("%li\n", l);
+	printf("%li\n", f);
 
 	return (0);
 }

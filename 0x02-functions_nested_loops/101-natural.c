@@ -8,15 +8,15 @@
 int main(void)
 {
 	int i = 3;
-	int a = 0;
+	int sum = 0;
 
 	do {
 		if ((i % 3 == 0) || (i % 5 == 0))
-			a = a + i;
+			sum = sum + i;
 
 		i++;
 	} while (i < 1024);
 
-	printf("%i\n", a);
+	printf("%i\n", sum);
 	return (0);
 }
