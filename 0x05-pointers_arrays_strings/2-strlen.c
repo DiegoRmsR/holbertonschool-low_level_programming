@@ -6,10 +6,12 @@
  * Return: c
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int c;
 
-	for (c = 0; s[c] != '\0'; c++)	
+  for (c = 0; str[c] != '\0'; c++)
+  {
+  }
 	return (c);
 }
