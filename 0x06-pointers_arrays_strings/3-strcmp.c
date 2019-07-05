@@ -6,15 +6,15 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int n = 0;
 
-	while(s1[i] && s2[i])
+	while(s1[n] && s2[n])
 	{
-		if (s1[i] != s2[i])
+		if (s1[n] != s2[n])
 		{
-			return (s1[i] - s2[i]);
+			return (s1[n] - s2[n]);
 		}
-		i++;
+		n++;
 	}
-	return (s1[i] - s2[i]);
+	return (s1[n] - s2[n]);
 }
