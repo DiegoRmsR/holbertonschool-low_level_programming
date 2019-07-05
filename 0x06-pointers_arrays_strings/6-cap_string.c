@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * cap_string - Function that capitalizes all words of string
- * @c: string to be capitalized
- * Return: c string 
+ * @n: string to be capitalized
+ * Return: c string
  */
 char *cap_string(char *n)
 {
@@ -13,7 +13,7 @@ char *cap_string(char *n)
 	{
 		for (c = 0; c < 13; c++)
 		{
-			if ((n[i] == s[c]) && n[i + 1] >= 'a' && n[i +1] <= 'z')
+			if ((n[i] == s[c]) && n[i + 1] >= 'a' && n[i + 1] <= 'z')
 			n[i + 1] -= 32;
 
 			if (n[0] >= 'a' && n[0] <= 'z')
