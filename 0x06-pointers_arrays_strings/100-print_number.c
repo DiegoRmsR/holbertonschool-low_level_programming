@@ -9,24 +9,21 @@
 void print_number(int n)
 
 {
-	/* local variable declaration */
-	unsigned int z;
+	unsigned int i;
 
 	if (n < 0)
 		{
 		_putchar('-');
-		z = -n;
+		i = -n;
 		}
 	else
-		z = n;
+		i = n;
 
-	if (z >= 10)
+	if (i >= 10)
 		{
-		print_number(z / 10);
-		_putchar('0' + (z % 10));
+		print_number(i / 10);
+		_putchar('0' + (i % 10));
 		}
 	else
-		_putchar('0' + (z % 10));
-
-
+		_putchar('0' + (i % 10));
 }
