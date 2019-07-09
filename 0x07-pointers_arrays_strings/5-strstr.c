@@ -8,29 +8,20 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	/* local variable declaration */
-	unsigned int i, j, c, l;
+	int i, j;
 
-	c = 0;
-	while (*(needle + c) != '\0')
-		c++;
+	if (needle == 0)
+		return (haystack);
 
-	l = 0;
-	while (*(haystack + l) != '\0')
-		l++;
-
-	for (i = 0 ; i < l ; i++)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (j = 0 ; j < c ; j++)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (*(needle + j) != *(haystack + i + j))
+			if (haystack[i + j] != needle[j])
 				break;
-			if (j == c - 1)
-				return (haystack + i);
-			if (i + j == l - 1)
-				return (0);
 		}
-
+		if (needle[j] == '\0')
+			return (haystack + i);
 	}
 	return (0);
 }
