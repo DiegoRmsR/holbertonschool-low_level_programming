@@ -1,23 +1,42 @@
 #include "holberton.h"
+/* #include <stdio.h> */
+
 /**
- * _strstr - function that locates a substring
- * @haystack: Store the first segment
- * @needle: Store the second segment
- * Return: Pointer to the byte in s.
-*/
+ * _strstr -  Locates a substring.
+ *
+ * @haystack: String
+ * @needle: Substring
+ * Return: pointer to the beginning of the located substring,
+ *         or NULL if the substring is not found.
+ *
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	/* local variable declaration */
+	unsigned int i, j, c;
 
-	for (i = 0; haystack[i] != '\0'; i++)
-	{
-		for (j = 0; needle[j] != '\0'; j++)
+	c = 0;
+	while (*(needle + c) != '\0')
+		c++;
+
+	i = 0;
+	while (*(haystack + i) != '\0')
 		{
-			if (haystack[i] == needle[j])
+		j = 0;
+		while (*(needle + j) != '\0')
 			{
-				return (needle);
+/*			printf("haystack[%d]=%c needle[%d]=%c\n",i, haystack[i], j, needle[j]);*/
+			if (*(needle + j) == *(haystack + i))
+				{
+				j++;
+				i++;
+				}
+			else
+				break;
+			if (j == c)
+				return (haystack + i - j);
 			}
+		i++;
 		}
-	}
 	return (0);
 }
