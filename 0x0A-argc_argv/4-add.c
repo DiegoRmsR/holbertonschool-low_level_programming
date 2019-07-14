@@ -4,7 +4,7 @@
 /**
  * main - adds positive numbers
  * @argc: number of command line arguments
- * @argv: array thet contains line  arguments of argc
+ * @argv: array thet contains arguments of argc
  * Return: 0
 */
 int main(int argc, char *argv[])
