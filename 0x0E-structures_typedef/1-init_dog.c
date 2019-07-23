@@ -1,11 +1,10 @@
 #include "dog.h"
-
 /**
  * init_dog -  function that initialize a variable
  * struct dog - Object dog
  * @d: pointer
  * @age: numbers float
- * @name: po	inter char name
+ * @name: pointer char name
  * @owner: pointer char
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
