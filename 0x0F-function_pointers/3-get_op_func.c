@@ -1,4 +1,5 @@
 #include "3-calc.h"
+
 /**
  * get_op_func - check if the absolute value of a number is 98
  * @s: the integer to check
@@ -21,10 +22,8 @@ int (*get_op_func(char *s))(int, int)
 	while (i < 5)
 	{
 		if (ops[i].op[0] == *s)
-		{
 			return (ops[i].f);
-		}
-		i++
+		i++;
 	}
 	return (NULL);
 }
