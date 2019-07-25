@@ -1,6 +1,4 @@
-#include <stdlib.h>
 #include "3-calc.h"
-
 
 /**
  * op_add - sum operation
@@ -22,7 +20,7 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-	return (a - b)
+	return (a - b);
 }
 /**
  * op_mul - multiplication operation
@@ -33,13 +31,13 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-	return (a * b)
+	return (a * b);
 }
 /**
  * op_div - division operation
  * @a: num1 of shell
  * @b: num2 of shell
- * Return:
+ * Return: divition
 */
 
 int op_div(int a, int b)
@@ -56,6 +54,7 @@ int op_div(int a, int b)
  * op_mod - operation module
  * @a: num1 of shell
  * @b: num2 of shell
+ * Return: Modulo
 */
 int op_mod(int a, int b)
 {
@@ -64,5 +63,5 @@ int op_mod(int a, int b)
 		printf("Error\n");
 		exit(100);
 	}
-	return (a / b);
+	return (a % b);
 }
