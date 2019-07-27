@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+
 /**
  * print_strings - function that prints strings
  * @separator: separator to print between numbers
@@ -13,24 +14,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *strings;
 
 	va_start(list, n);
-	if (separator != NULL)
+
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
-		{
-			strings = va_arg(list, char*);
-			if (strings == NULL)
-			{
-				printf("(nil)");
-			}
+		strings = va_arg(list, char*);
 
+		if (strings)
 			printf("%s", strings);
+		else
+			printf("(nil)");
 
-			if (i < n - 1 && separator)
-			{
-				printf("%s", separator);
-			}
-		}
-		printf("\n");
-		va_end(list);
+		if (i < n - 1 && separator)
+			printf("%s", separator);
 	}
+	printf("\n");
+	va_end(list);
 }
