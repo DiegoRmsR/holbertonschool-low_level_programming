@@ -5,7 +5,7 @@
  * @h: head pointer
  *
  * Return: number of nodes
-*/
+ */
 size_t print_listint(const listint_t *h)
 {
 	size_t nelem = 0;
