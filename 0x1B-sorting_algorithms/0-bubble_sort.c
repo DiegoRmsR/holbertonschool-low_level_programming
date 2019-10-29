@@ -9,25 +9,35 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i = 0;
-	int tmp = 0;
-	int flag = 0;
+	int min = 0, sen = 0;
+	size_t j = 0;
 
 	if (!array)
 		return;
 
-	while (flag != -1)
+	/** Value sentinel for know if there swap */
+	while (sen != -1)
 	{
-		flag = -1;
-		for (i = 0; i < size - 1; ++i)
+		/** Assume there not swap */
+		sen = -1;
+
+		/** Traversing the array */
+		for (j = 0; j < size - 1; ++j)
 		{
-			if (array[i] > array[i + 1])
+			/** Verify if the current is greater than the next */
+			if (array[j] > array[j + 1])
 			{
-				tmp = array[i + 1];
-				array[i + 1] = array[i];
-				array[i] = tmp;
+				/** Store the value next in a temporal */
+				min = array[j + 1];
+				/** Value next is placed in the current index */
+				array[j + 1] = array[j];
+				/** Current value swap with the index */
+				array[j] = min;
+				/** Print the array */
 				print_array(array, size);
-				flag = 1;
+
+				/** Equal to sen 1 */
+				sen = 1;
 			}
 		}
 	}
