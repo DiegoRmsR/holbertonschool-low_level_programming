@@ -9,12 +9,13 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i;
-	int tmp;
-	int flag;
+	size_t i = 0;
+	int tmp = 0;
+	int flag = 0;
 
 	if (!array)
 		return;
+
 	while (flag != -1)
 	{
 		flag = -1;
