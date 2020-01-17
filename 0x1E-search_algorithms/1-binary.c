@@ -10,7 +10,7 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	unsigned int m = size, left = 0, right = size - 1;
+	unsigned int med = size, left = 0, right = size - 1;
 
 	if (array == NULL && size < 1)
 		return (-1);
@@ -18,28 +18,32 @@ int binary_search(int *array, size_t size, int value)
 	while (left <= right)
 	{
 		printf("Searching in array: ");
-		print_ar(array, left, right);
+		print_array(array, left, right);
 
+		/* Take the size of each stack of arrays */
 		med = ((left + right) / 2);
 
-		if (array[m] == value)
-			return (m);
-		if (array[m] < value)
-			left = m + 1;
+		/* The medium is equal to value */
+		if (array[med] == value)
+			return (med);
+		/** Not look left way if is smaller than value*/
+		if (array[med] < value)
+			left = med + 1;
+		/* If the med is greater than value */
 		else
-			right = m - 1;
+			right = med - 1;
 	}
 
 	return (-1);
 }
 
 /**
- * print_ar - Print a array
+ * print_array - Print a array
  * @array: Store several numbers
  * @start: Introduction to array
  * @end: Ending of the array
  */
-void print_ar(int *array, unsigned int start, unsigned int end)
+void print_array(int *array, unsigned int start, unsigned int end)
 {
 	while (start <= end)
 	{
